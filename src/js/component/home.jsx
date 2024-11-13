@@ -73,7 +73,7 @@ const Home = () => {
 				id="Field"
 				type="text"
 				className="form-control mb-3"
-				placeholder="Añadir una tarea..."
+				placeholder="Añadir tarea..."
 				value={nuevaTarea}
 				onChange={(e) => setNuevaTarea(e.target.value)}
 				onKeyPress={handleKeyPress}

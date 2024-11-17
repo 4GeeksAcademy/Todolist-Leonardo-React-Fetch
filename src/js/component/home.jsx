@@ -47,11 +47,15 @@ const Home = () => {
 
   // Función para eliminar todas las tareas
   const clearAllTodos = () => {
-    fetch("https://playground.4geeks.com/todo/todos/Leonardo4Geeks", {
-      method: "DELETE",
-    })
+    const deleteRequests = todos.map(todo =>
+      fetch(`https://playground.4geeks.com/todo/todos/${todo.id}`, {
+        method: "DELETE",
+      })
+    );
+
+    Promise.all(deleteRequests)
       .then(() => {
-        setTodos([]);  // Limpiar la lista local
+        setTodos([]); // Limpiar la lista local después de eliminar todas las tareas
         alert("Todas las tareas fueron eliminadas");
       })
       .catch(() => alert("Error al eliminar todas las tareas"));
@@ -70,15 +74,18 @@ const Home = () => {
               </li>
             ))}
           </ul>
-          <Campo onAddTodo={addTodo} />
+          <Campo onAddTodo={addTodo} isListCreated={isListCreated} />
           <button className="clear-all-btn" onClick={clearAllTodos}>Eliminar todas las tareas</button>
         </div>
       ) : (
         <div className="todo-list">
-          <Campo onListCreated={(newTodos) => {
-            setTodos(newTodos);
-            setIsListCreated(true);
-          }} />
+          <Campo
+            onListCreated={(newTodos) => {
+              setTodos(newTodos);
+              setIsListCreated(true);
+            }}
+            isListCreated={isListCreated}
+          />
         </div>
       )}
     </div>

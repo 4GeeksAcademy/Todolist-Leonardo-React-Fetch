@@ -70,7 +70,8 @@ const Home = () => {
             {todos.map((todo, index) => (
               <li key={index}>
                 {todo.label}
-                <button onClick={() => deleteTodo(todo.id)}>Eliminar</button>
+                <button onClick={() => deleteTodo(todo.id)}><i class="fa fa-trash" aria-hidden="true"></i>
+                </button>
               </li>
             ))}
           </ul>

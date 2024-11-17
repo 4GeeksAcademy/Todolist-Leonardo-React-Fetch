@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 .container {
     display: flex;
@@ -13,6 +15,12 @@
     box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
+    font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
   }
   
   /* Título de la lista de tareas */
@@ -20,9 +28,12 @@
     text-align: center;
     margin-bottom: 20px;
     font-size: 3.8em;
+    font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
   }
   
-  /* Estilos para la lista de tareas */
+  /* Lista de tareas */
   ul {
     list-style: none;
     padding: 0;
@@ -62,8 +73,7 @@
     margin-top: 20px;
     border-radius: 5px;
     font-size: 1em;
-    cursor: pointer;
-    
+    cursor: pointer;    
   }
   
   .clear-all-btn:hover {
@@ -71,11 +81,23 @@
   }
 
 .d-flex input {
-  flex: 1; /* El input ocupará todo el espacio disponible */
-  margin-right: 10px; /* Espacio entre el input y el botón */
+  flex: 1;
+  margin-right: 0.6em;
+  background-color: rgb(250, 250, 250);
 }
 
 /* Estilo del botón */
 .d-flex button {
-  padding: 10px 20px; /* Ajustar el tamaño del botón */
+    background-color: #00844f;
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;   
+}
+.d-flex button:hover {
+  background-color: #014e30;
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
 }

@@ -32,7 +32,7 @@ const Campo = ({ onListCreated, onAddTodo, isListCreated }) => {
   };
 
   const handleKeyPress = (event) => {
-    if (event.key === "Enter") { // Detectar cuando se presiona "Enter"
+    if (event.key === "Enter") {
       handleAddTodo();
     }
   };

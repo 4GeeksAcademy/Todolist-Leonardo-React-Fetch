@@ -1,12 +1,99 @@
-
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* lista donde se muestran las tareas */
+/* Estilos generales para el contenedor principal */
+.container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center;     /* Centra verticalmente */
+    height: 100vh;           /* Ocupa toda la altura de la ventana */
+    background-color: #f4f7f6; /* Color de fondo suave */
+  }
+  
+  /* Estilos para el contenedor de la lista de tareas */
+  .todo-list {
+    background-color: white; /* Fondo blanco para la lista */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el efecto */
+    width: 100%;
+    max-width: 500px; /* Ancho máximo de la lista */
+  }
+  
+  /* Título de la lista de tareas */
+  .todo-list h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+  }
+  
+  /* Estilos para la lista de tareas */
+  ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between; /* Espacio entre el texto y el botón de eliminar */
+    align-items: center;
+    background-color: #fafafa; /* Fondo suave para cada tarea */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  }
+  
+  /* Botones de eliminar tarea */
+  button {
+    background-color: #ff5c5c; /* Rojo para el botón de eliminar */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #ff2a2a; /* Rojo más oscuro al hacer hover */
+  }
+  
+  /* Botón para eliminar todas las tareas */
+  .clear-all-btn {
+    background-color: #ffcc00; /* Color amarillo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .clear-all-btn:hover {
+    background-color: #e6b800; /* Amarillo más oscuro al hacer hover */
+  }
+  
+  /* Estilo del campo de entrada de la nueva tarea */
+  input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+  }
+  
+  button[type="button"] {
+    background-color: #4CAF50; /* Verde para agregar tarea */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #45a049; /* Verde más oscuro al hacer hover */
+  }
+  

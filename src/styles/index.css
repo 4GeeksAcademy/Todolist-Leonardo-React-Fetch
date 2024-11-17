@@ -1,12 +1,81 @@
 
-/* 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .todo-list {
+    background-color: rgb(249, 249, 249);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  /* Título de la lista de tareas */
+  .todo-list h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3.8em;
+  }
+  
+  /* Estilos para la lista de tareas */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Botones de eliminar tarea */
+  button {
+    background-color: #ff5c5c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #ff2a2a;
+  }
+  
+  /* Botón para eliminar todas las tareas */
+  .clear-all-btn {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    
+  }
+  
+  .clear-all-btn:hover {
+    background-color: #c52936;
+  }
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.d-flex input {
+  flex: 1; /* El input ocupará todo el espacio disponible */
+  margin-right: 10px; /* Espacio entre el input y el botón */
+}
 
-*/
+/* Estilo del botón */
+.d-flex button {
+  padding: 10px 20px; /* Ajustar el tamaño del botón */
+}

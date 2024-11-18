@@ -4,7 +4,7 @@ const Campo = ({ onListCreated, onAddTodo, isListCreated }) => {
   const [inputValue, setInputValue] = useState(""); // Estado para el valor del input
 
   const createOrSyncList = () => {
-    // Realiza una petición para sincronizar o crear la lista
+    // Sincronizar o crear lista
     fetch("https://playground.4geeks.com/todo/users/Leonardo4Geeks/")
       .then(response => {
         if (response.ok) return response.json(); // Si la lista existe, la sincroniza
@@ -15,19 +15,19 @@ const Campo = ({ onListCreated, onAddTodo, isListCreated }) => {
         }).then(res => res.json());
       })
       .then(data => {
-        onListCreated(data.todos || []); // Devuelve las tareas y cambia el estado de la lista creada
+        onListCreated(data.todos || []);
         alert("Lista sincronizada o creada");
       })
-      .catch(() => alert("Error al sincronizar o crear la lista")); // Manejo de errores
+      .catch(() => alert("Error al sincronizar o crear la lista"));
   };
 
   const handleAddTodo = () => {
-    if (inputValue.trim()) { // Si el input no está vacío
-      const newTodo = { label: inputValue, is_done: false }; // Se crea una nueva tarea
-      onAddTodo(newTodo); // Se agrega la tarea mediante la función pasada como prop
-      setInputValue(""); // Limpiar el campo de entrada
+    if (inputValue.trim()) {
+      const newTodo = { label: inputValue, is_done: false };
+      onAddTodo(newTodo);
+      setInputValue("");
     } else {
-      alert("Por favor ingresa una tarea."); // Si el input está vacío, muestra un mensaje
+      alert("Por favor ingresa una tarea.");
     }
   };
 
@@ -39,7 +39,7 @@ const Campo = ({ onListCreated, onAddTodo, isListCreated }) => {
 
   return (
     <div>
-      {!isListCreated ? ( // Mostrar el botón de sincronizar solo si la lista no está creada
+      {!isListCreated ? (
         <div className="d-flex justify-content-center">
           <button onClick={createOrSyncList} className="btn btn-info">
             Sincronizar o Crear Lista
@@ -51,9 +51,9 @@ const Campo = ({ onListCreated, onAddTodo, isListCreated }) => {
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
-            onKeyDown={handleKeyPress} // Detecta la tecla Enter
+            onKeyDown={handleKeyPress}
             placeholder="Nueva tarea"
-            className="form-control mr-2" // Asegura que el input tenga un estilo adecuado
+            className="form-control mr-2"
           />
           <button onClick={handleAddTodo} className="btn btn-primary">Agregar Tarea</button>
         </div>

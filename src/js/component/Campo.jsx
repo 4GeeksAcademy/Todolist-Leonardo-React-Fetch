@@ -50,6 +50,7 @@ const Campo = ({ onListCreated, onAddTodo, isListCreated }) => {
           <input
             type="text"
             value={inputValue}
+            maxLength={32}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={handleKeyPress}
             placeholder="Nueva tarea"

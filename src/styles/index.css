@@ -2,83 +2,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .todo-list {
-    background-color: rgb(249, 249, 249);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 500px;
-    font-family: "Sour Gummy", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.todo-list {
+  background-color: rgb(249, 249, 249);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  font-family: "Sour Gummy", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
-  }
-  
-  /* Título de la lista de tareas */
-  .todo-list h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 3.8em;
-    font-family: "Pacifico", cursive;
+}
+
+/* Título de la lista de tareas */
+.todo-list h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 3.8em;
+  font-family: "Pacifico", cursive;
   font-weight: 400;
   font-style: normal;
-  }
-  
-  /* Lista de tareas */
-  ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fafafa;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Botones de eliminar tarea */
-  button {
-    background-color: #ff5c5c;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #ff2a2a;
-  }
-  
-  /* Botón para eliminar todas las tareas */
-  .clear-all-btn {
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    width: 100%;
-    margin-top: 20px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;    
-  }
-  
-  .clear-all-btn:hover {
-    background-color: #c52936;
-  }
+}
+
+/* Lista de tareas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones de eliminar tarea */
+button {
+  background-color: #ff5c5c;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ff2a2a;
+}
+
+/* Botón para eliminar todas las tareas */
+.clear-all-btn {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.clear-all-btn:hover {
+  background-color: #c52936;
+}
 
 .d-flex input {
   flex: 1;
@@ -88,16 +87,17 @@
 
 /* Estilo del botón */
 .d-flex button {
-    background-color: #00844f;
-    color: white;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;   
+  background-color: #00844f;
+  color: white;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
 }
+
 .d-flex button:hover {
   background-color: #014e30;
-    color: white;
-    border: none;
-    font-size: 1em;
-    cursor: pointer;
+  color: white;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
 }
